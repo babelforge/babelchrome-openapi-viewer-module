@@ -1,0 +1,87 @@
+{
+  "id": "babelforge.openapi-viewer",
+  "name": "OpenAPI Viewer",
+  "version": "1.0.0",
+  "requirements": {
+    "php": ">=8.4"
+  },
+  "description": "Renders local and remote OpenAPI and Swagger documents with Swagger UI.",
+  "type": "viewer",
+  "enabled": true,
+  "supports": [
+    "file-viewer"
+  ],
+  "runtime": {
+    "type": "web",
+    "entrypoint": "public/index.php"
+  },
+  "entrypoint": "public/index.php",
+  "routes": [
+    {
+      "scheme": "babelchrome",
+      "host": "openapi",
+      "handler": "openapi"
+    }
+  ],
+  "fileTypes": [
+    "yaml",
+    "yml",
+    "json"
+  ],
+  "file-type-handler": {
+    "fileTypes": [
+      "yaml",
+      "yml",
+      "json"
+    ]
+  },
+  "fileNameContains": [
+    "openapi",
+    "swagger"
+  ],
+  "hooks": [
+    "url.resolve",
+    "file.open.resolve",
+    "address.badge.resolve",
+    "context-menu.build",
+    "settings.section.register",
+    "tab.title.resolve"
+  ],
+  "permissions": [
+    "read-local-files",
+    "serve-assets",
+    "network-fetch",
+    "native-open-file",
+    "native-reveal-file",
+    "context-menu",
+    "settings"
+  ],
+  "menuItems": [
+    {
+      "id": "openapi.open-source-file",
+      "label": "Open Source File",
+      "hook": "context-menu.build",
+      "route": "babelchrome://openapi/action/open-source-file",
+      "contexts": [
+        "openapi.local-file"
+      ]
+    },
+    {
+      "id": "openapi.reveal-in-finder",
+      "label": "Reveal in Finder",
+      "hook": "context-menu.build",
+      "route": "babelchrome://openapi/action/reveal-in-finder",
+      "contexts": [
+        "openapi.local-file"
+      ]
+    }
+  ],
+  "badge": {
+    "text": "API",
+    "textColor": "#ffffff",
+    "backgroundColor": "#1a7f37"
+  },
+  "settings": {
+    "route": "babelchrome://settings#openapi-viewer"
+  }
+}
