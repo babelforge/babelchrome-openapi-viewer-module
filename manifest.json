@@ -1,7 +1,7 @@
 {
   "id": "babelforge.openapi-viewer",
   "name": "OpenAPI Viewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "requirements": {
     "php": ">=8.4"
   },
@@ -82,6 +82,6 @@
     "backgroundColor": "#1a7f37"
   },
   "settings": {
-    "route": "babelchrome://settings#openapi-viewer"
+    "route": "babelchrome://settings/babelforge.openapi-viewer"
   }
 }
