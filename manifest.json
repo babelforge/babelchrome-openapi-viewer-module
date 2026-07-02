@@ -1,7 +1,7 @@
 {
   "id": "babelforge.openapi-viewer",
   "name": "OpenAPI Viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "requirements": {
     "php": ">=8.4"
   },
