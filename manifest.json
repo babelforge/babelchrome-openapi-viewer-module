@@ -1,7 +1,7 @@
 {
   "id": "babelforge.openapi-viewer",
   "name": "OpenAPI Viewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "requirements": {
     "php": ">=8.4"
   },
@@ -44,7 +44,6 @@
     "file.open.resolve",
     "address.badge.resolve",
     "context-menu.build",
-    "settings.section.register",
     "tab.title.resolve"
   ],
   "permissions": [
@@ -53,8 +52,7 @@
     "network-fetch",
     "native-open-file",
     "native-reveal-file",
-    "context-menu",
-    "settings"
+    "context-menu"
   ],
   "menuItems": [
     {
@@ -80,8 +78,5 @@
     "text": "API",
     "textColor": "#ffffff",
     "backgroundColor": "#1a7f37"
-  },
-  "settings": {
-    "route": "babelchrome://settings/babelforge.openapi-viewer"
   }
 }
