@@ -10,8 +10,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BabelForge\\BabelChromeOpenApiViewerModule\\Tests\\": "tests/",
-            "BabelForge\\BabelChrome\\LocalViewer\\": "tests/LocalViewer/"
+            "BabelForge\\BabelChromeOpenApiViewerModule\\Tests\\": "tests/"
         }
     },
     "require": {
